@@ -1,0 +1,474 @@
+/* Reset general de márgenes y padding, con box-sizing border-box para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body y fuente */
+body {
+    font-family: 'Candara', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 200px;
+}
+
+/* Video de fondo que cubre toda la pantalla */
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Contenedor principal centrado con ancho máximo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/* Encabezado con imagen de fondo y gradiente */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/Fotos/Fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 70px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: respiracion 4s ease-in-out infinite;
+}
+
+@keyframes respiracion {
+    0%, 100% {
+        box-shadow: 
+            0 0px 20px #0091ff,
+            0 0px 40px #0091ff,
+            0 0px 90px rgba(0, 145, 255, 0.6);
+    }
+    50% {
+        box-shadow: 
+            0 0px 20px #ff00ea,
+            0 0px 40px #ff00ea,
+            0 0px 90px rgba(255, 0, 234, 0.6);
+    }
+}
+
+/* Título principal del portfolio */
+h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Párrafo del encabezado */
+header p {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+/* Grid para la galería de habilidades */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+/* Sección de habilidades con fondo transparente */
+.skills-gallery {
+    background: transparent;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Título de la sección de habilidades */
+.skills-gallery h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+/* Items individuales de habilidades */
+.skill-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los items de habilidades */
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Título de cada habilidad */
+.skill-item h3 {
+    color: #000000;
+    font-size: 1.1em;
+}
+
+/* Iconos de las habilidades */
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    object-fit: cover;
+}
+
+/* Lista de competencias personales */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Items individuales de la lista de competencias */
+.skills-list span {
+    background: linear-gradient(135deg, #a00394, #1a6fb2);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efectos para las skills */
+.skills-list span:hover {
+    background: linear-gradient(135deg, #ff00ea, #00a8ff);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 234, 0.5);
+}
+
+/* Grid principal para las tarjetas de formación, experiencia y competencias */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas individuales (Formación, Experiencia, Competencias) */
+.card {
+    background: transparent;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Títulos de las tarjetas */
+.card h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+/* Items dentro de las tarjetas (formación, experiencia) */
+.item {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Efecto para tarjetas (formación, experiencia) */
+.item:hover {
+    box-shadow: 
+        0 0 0 2px rgba(0, 168, 255, 1),
+        0 0 20px rgba(0, 168, 255, 1);
+    background-color: #f8fbff;
+    transform: translateY(-2px);
+}
+
+/* Último item de cada tarjeta */
+.item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Texto en negrita dentro de los items */
+.item strong {
+    display: block;
+    color: #000;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+/* Texto normal dentro de los items */
+.item span {
+    display: block;
+    color: #000000;
+    font-size: 0.95em;
+}
+
+/* Sección de carruseles para proyectos */
+.carousel-section {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 10px 20px 20px;
+    margin: 30px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 900px;
+}
+
+/* Títulos de las secciones de carrusel */
+.carousel-section h2 {
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Contenedor del carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contenedor de imágenes del carrusel */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Imágenes del carrusel */
+.carousel-images img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 15px;
+}
+
+/* Imágenes verticales en el carrusel */
+.carousel-images img.vertical-img {
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* Botones de navegación del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #a00394, #1a6fb2);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efectos de botones de navegación del carrusel */
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.2);
+    background: linear-gradient(135deg, #ff00ea, #00a8ff);
+}
+
+/* Posicionamiento botones anterior y siguiente */
+.carousel-btn.prev { left: 20px; }
+.carousel-btn.next { right: 20px; }
+
+/* Contenedor de video vertical*/
+.video-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Contenedor de video horizontal */
+.video-container.horizontal {
+    max-width: 800px;
+}
+
+/* Video en contenedor horizontal */
+.video-container.horizontal video {
+    height: 450px;
+}
+
+/* Estilos generales para videos */
+.video-container video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Items individuales de proyectos */
+.proyecto-item {
+    margin-bottom: 40px;
+}
+
+/* Títulos de proyectos individuales */
+.proyecto-item h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.3em;
+}
+
+/* Botón de descarga */
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #a00394, #1a6fb2);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Efecto hover para botón de descarga */
+.download-btn:hover {
+    background: linear-gradient(135deg, #ff00ea, #00a8ff);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00a8ff;
+}
+
+/* Estilos de Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 168, 255, 0.3);
+    z-index: 1000;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: #00a8ff;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    font-family: "Lucida Sans", sans-serif;
+    font-size: 12px;
+}
+
+.contact-icon {
+    font-size: 1.2em;
+    width: 40px;
+    object-fit: contain;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    font-family: "Lucida Sans", sans-serif;
+    font-size: 12px;
+    width: 40px;
+    object-fit: contain;
+}
+
+.social-link:hover {
+    color: #00a8ff;
+}
+
+.social-icon {
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    opacity: 0.9;
+    font-family: "Lucida Sans", sans-serif;
+    font-size: 12px;
+}
+
+/* Animación */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer {
+        padding: 30px 15px 15px;
+    }
+}
+
+/* GIF EASTER EGG */
+.gif-surprise-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gif-surprise {
+    max-width: 120px;
+    max-height: 60px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.gif-surprise-container:hover .gif-surprise {
+    opacity: 1;
+    filter: 
+        drop-shadow(0 0 1px #ff00ea)
+        brightness(3)
+        contrast(1.1);
+}
+
+/* MEDIA QUERIES PARA DISPOSITIVOS MÓVILES */
+@media (max-width: 768px) {
+    /* Galería de habilidades en 2 columnas en móvil */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Grid principal en una sola columna en móvil */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
