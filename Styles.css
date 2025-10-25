@@ -33,7 +33,7 @@ body {
 
 /* Encabezado con imagen de fondo y gradiente */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/Fotos/Fondo.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('Fotos/Fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
