@@ -239,6 +239,7 @@ header p {
     border-radius: 15px;
     max-width: 800px;
     margin: 0 auto;
+    min-height: 400px;
 }
 
 /* Contenedor de imágenes del carrusel */
@@ -258,7 +259,7 @@ header p {
 
 /* Imágenes verticales en el carrusel */
 .carousel-images img.vertical-img {
-    height: auto;
+    height: 400px;
     max-height: 500px;
     object-fit: contain;
 }
@@ -277,6 +278,7 @@ header p {
     font-size: 1.2em;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 10;
 }
 
 /* Efectos de botones de navegación del carrusel */
@@ -470,5 +472,134 @@ header p {
     /* Grid principal en una sola columna en móvil */
     .grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Header más compacto para móvil */
+    header {
+        border-radius: 30px;
+        padding: 20px;
+        margin: 0 15px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    
+    /* Contenedor principal con padding lateral */
+    .container {
+        padding: 20px 15px;
+    }
+    
+    /* Secciones de habilidades más compactas */
+    .skills-gallery {
+        padding: 20px 15px;
+        margin: 0 15px 20px;
+    }
+    
+    /* Tarjetas con márgenes laterales */
+    .card {
+        margin: 0 15px 20px;
+    }
+    
+    /* Secciones de carrusel más compactas */
+    .carousel-section {
+        margin: 20px 15px;
+        padding: 15px;
+    }
+    
+    /* Carruseles adaptados al ancho móvil */
+    .carousel {
+        max-width: 100%;
+        min-height: 300px;
+    }
+    
+    .carousel-images img {
+        height: 300px;
+    }
+    
+    .carousel-images img.vertical-img {
+        height: 300px;
+    }
+    
+    /* Videos adaptados al ancho móvil */
+    .video-container {
+        max-width: 100%;
+    }
+    
+    .video-container.horizontal video {
+        height: 300px;
+    }
+    
+    /* Footer normal pegado abajo sin espacio */
+    .footer {
+        position: relative;
+        margin-top: 40px;
+        width: 100%;
+    }
+    
+    /* Botones de carrusel a 40px para móvil */
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+    
+    .carousel-btn.prev {
+        left: 10px;
+    }
+    
+    .carousel-btn.next {
+        right: 10px;
+    }
+    
+    /* ELIMINAR el padding-bottom del body en móvil */
+    body {
+        padding-bottom: 0;
+    }
+}
+
+/* Para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    header {
+        border-radius: 20px;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .carousel {
+        min-height: 250px;
+    }
+    
+    .carousel-images img {
+        height: 250px;
+    }
+    
+    .carousel-images img.vertical-img {
+        height: 250px;
+    }
+    
+    .video-container.horizontal video {
+        height: 250px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .skill-item {
+        padding: 15px;
+    }
+    
+    .skill-icon {
+        width: 50px;
+        height: 50px;
     }
 }
